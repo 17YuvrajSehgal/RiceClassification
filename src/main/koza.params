@@ -112,7 +112,7 @@ gp.koza.mutate.tries = 1
 # The default tournament size for TournamentSelection is 7
 #
 
-select.tournament.size = 7
+select.tournament.size = 3
 
 
 
@@ -125,8 +125,8 @@ select.tournament.size = 7
 # This means that if someone decided to use GROW to generate
 # new individual trees, it's also use the defaults below
 # unless he overrided them locally.
-gp.koza.grow.min-depth = 5
-gp.koza.grow.max-depth = 5
+gp.koza.grow.min-depth = 3
+gp.koza.grow.max-depth = 7
 
 
 

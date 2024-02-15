@@ -47,8 +47,11 @@ gp.fs.0.func.14.nc = nc0
 
 pop.subpop.0.size = 1024
 
-generations = 50
+generations = 51
 
+select.tournament.size = 3
+
+#jobs = 10
 
 eval.problem = main.Classifier
 eval.problem.data = main.DoubleData
@@ -56,3 +59,21 @@ eval.problem.data = main.DoubleData
 # output statistics to the file "out.stat" in the directory
 # the run was started in
 stat.file				$out.stat
+
+##change
+breed.elite.0 = 			10
+
+# Reproduction will use Tournament Selection
+breed.reproduce.source.0 = ec.select.TournamentSelection
+
+# Crossover will use Tournament Selection, try only 1
+# time, have a max depth of 17, and use KozaNodeSelector
+gp.koza.xover.source.0 = ec.select.TournamentSelection
+gp.koza.xover.source.1 = same
+gp.koza.xover.ns.0 = ec.gp.koza.KozaNodeSelector
+gp.koza.xover.ns.1 = same
+gp.koza.xover.maxdepth = 17
+# This is the default for Koza and lil-gp, though it's
+# a little wimpy; on the other hand, a higher number can
+# make things really slow
+gp.koza.xover.tries = 1
