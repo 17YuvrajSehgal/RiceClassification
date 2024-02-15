@@ -17,11 +17,11 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
     private final int TOTAL_NUM_OF_DATA_ROWS = 3810;
     private final int NUM_OF_DATA_FIELDS = 8;
 
-
     public static final String P_DATA = "data";
     public double area, perimeter, majorAxisLength, minorAxisLength, eccentricity, convexArea, extent;
 
     double[][] riceData = new double[TOTAL_NUM_OF_DATA_ROWS][NUM_OF_DATA_FIELDS];
+    double[][] trainingData, testingData;
 
     public void fileReader() {
 
@@ -46,10 +46,25 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
                 row_number++;
             }
             shuffle2DArray(this.riceData);
-            //printArray(this.riceData);
+
+            splitData(0.6);
+
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+
+    public void splitData(double percentage){
+
+        final int TRAINING_DATA_ROWS = (int) Math.round(TOTAL_NUM_OF_DATA_ROWS * percentage);
+        final int TESTING_DATA_ROWS = (int) Math.round(TOTAL_NUM_OF_DATA_ROWS - TOTAL_NUM_OF_DATA_ROWS * percentage);
+
+        this.trainingData = new double[TRAINING_DATA_ROWS][this.NUM_OF_DATA_FIELDS];
+        this.testingData = new double[TESTING_DATA_ROWS][this.NUM_OF_DATA_FIELDS];
+        System.arraycopy(this.riceData, 0, trainingData, 0, TRAINING_DATA_ROWS);
+        System.arraycopy(this.riceData,TRAINING_DATA_ROWS,testingData,0,TESTING_DATA_ROWS);
+
     }
 
     public void printArray(double[][] arr) {
