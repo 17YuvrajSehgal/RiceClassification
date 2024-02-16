@@ -144,9 +144,15 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
     public void describe(EvolutionState state, Individual bestIndividual, int subpopulation, int threadnum, int log) {
         super.describe(state, bestIndividual, subpopulation, threadnum, log);
 
+        if(!(bestIndividual instanceof GPIndividual))
+            state.output.fatal("The best individual is not an instance of GPIndividual!!");
+
+
         DoubleData input = (DoubleData) this.input;
         int hits = 0;
         double expectedResult=0;
+
+
 
         for (double[] riceDatum : this.testingData) {
 
@@ -169,11 +175,15 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
             else if (input.x < 0.0 && expectedResult < 0.0) {
                 hits++;
             }
-
-            KozaFitness kozaFitness = ((KozaFitness) bestIndividual.fitness);
-            kozaFitness.setStandardizedFitness(state, this.testingData.length-hits);
-            kozaFitness.hits = hits;
         }
+
+        state.output.println("Best Individual's total correct hits: "+hits,log);
+
+        if(hits == this.testingData.length)
+            state.output.println("Best individual is OPTIMAL", log);
+        else
+            state.output.println("Best indivual is not optimal.",log);
+
     }
 
 }
