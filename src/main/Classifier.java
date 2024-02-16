@@ -14,14 +14,14 @@ import java.util.*;
 
 public class Classifier extends GPProblem implements SimpleProblemForm {
 
+    public static final String P_DATA = "data";
     private final int TOTAL_NUM_OF_DATA_ROWS = 3810;
     private final int NUM_OF_DATA_FIELDS = 8;
 
-    public static final String P_DATA = "data";
-    public double area, perimeter, majorAxisLength, minorAxisLength, eccentricity, convexArea, extent;
-
     double[][] riceData = new double[TOTAL_NUM_OF_DATA_ROWS][NUM_OF_DATA_FIELDS];
     double[][] trainingData, testingData;
+
+    public double area, perimeter, majorAxisLength, minorAxisLength, eccentricity, convexArea, extent;
 
     public void fileReader() {
 
@@ -36,7 +36,6 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
             while (scanner.hasNext()) {
                 tokenizer = new StringTokenizer(scanner.next(), ",");
                 for (int column = 0; column < this.NUM_OF_DATA_FIELDS - 1; column++) {
-                    //BigDecimal data = new BigDecimal(tokenizer.nextToken());
                     double data = Double.parseDouble(tokenizer.nextToken());
                     this.riceData[row_number][column] = data;
                 }
@@ -88,12 +87,10 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
     }
 
     @Override
-    public void setup(final EvolutionState state,
-                      final Parameter base) {
-        // very important, remember this
+    public void setup(final EvolutionState state, final Parameter base) {
+
         super.setup(state, base);
 
-        // verify our input is the right class (or subclasses from it)
         if (!(input instanceof DoubleData)) {
             state.output.fatal("GPData class must subclass from " + DoubleData.class,
                     base.push(P_DATA), null);
@@ -110,10 +107,9 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
             DoubleData input = (DoubleData) this.input;
 
             int hits = 0;
-            double sum=0, expectedResult=0,result=0;
+            double expectedResult=0;
 
-            for (double[] riceDatum : this.riceData) {
-
+            for (double[] riceDatum : this.trainingData) {
 
                 area = riceDatum[0];
                 perimeter = riceDatum[1];
@@ -130,23 +126,53 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
                 if (input.x >= 0.0 && expectedResult > 0.0) {
                     hits++;
-                    //result = Math.abs(expectedResult - input.x);
-                    //sum+=result;
                 }
                 else if (input.x < 0.0 && expectedResult < 0.0) {
                     hits++;
-                    //result = Math.abs(expectedResult - input.x);
-                    //sum+=result;
                 }
 
-                //System.out.println("------------------------------------------------------------------------------>>>" + sum);
-
                 KozaFitness kozaFitness = ((KozaFitness) individual.fitness);
-                kozaFitness.setStandardizedFitness(evolutionState, this.riceData.length-hits);
+                kozaFitness.setStandardizedFitness(evolutionState, this.trainingData.length-hits);
                 kozaFitness.hits = hits;
                 individual.evaluated = true;
             }
 
+        }
+    }
+
+    @Override
+    public void describe(EvolutionState state, Individual bestIndividual, int subpopulation, int threadnum, int log) {
+        super.describe(state, bestIndividual, subpopulation, threadnum, log);
+
+        DoubleData input = (DoubleData) this.input;
+        int hits = 0;
+        double expectedResult=0;
+
+        for (double[] riceDatum : this.testingData) {
+
+            area = riceDatum[0];
+            perimeter = riceDatum[1];
+            majorAxisLength = riceDatum[2];
+            minorAxisLength = riceDatum[3];
+            eccentricity = riceDatum[4];
+            convexArea = riceDatum[5];
+            extent = riceDatum[6];
+
+            expectedResult = riceDatum[7];
+
+            ((GPIndividual) bestIndividual).trees[0].child.eval(
+                    state, threadnum, input, stack, ((GPIndividual) bestIndividual), this);
+
+            if (input.x >= 0.0 && expectedResult > 0.0) {
+                hits++;
+            }
+            else if (input.x < 0.0 && expectedResult < 0.0) {
+                hits++;
+            }
+
+            KozaFitness kozaFitness = ((KozaFitness) bestIndividual.fitness);
+            kozaFitness.setStandardizedFitness(state, this.testingData.length-hits);
+            kozaFitness.hits = hits;
         }
     }
 

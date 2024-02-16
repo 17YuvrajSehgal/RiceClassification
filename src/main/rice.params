@@ -45,7 +45,7 @@ gp.fs.0.func.13.nc = nc0
 gp.fs.0.func.14 = functions.Perimeter
 gp.fs.0.func.14.nc = nc0
 
-pop.subpop.0.size = 1024
+pop.subpop.0.size = 500
 
 generations = 50
 
