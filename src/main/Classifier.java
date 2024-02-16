@@ -14,6 +14,7 @@ import java.util.*;
 
 public class Classifier extends GPProblem implements SimpleProblemForm {
 
+    int TN=0,FP=0,FN=0,TP=0;
     public static final String P_DATA = "data";
     private final int TOTAL_NUM_OF_DATA_ROWS = 3810;
     private final int NUM_OF_DATA_FIELDS = 8;
@@ -50,7 +51,7 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -64,15 +65,6 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
         System.arraycopy(this.riceData, 0, trainingData, 0, TRAINING_DATA_ROWS);
         System.arraycopy(this.riceData,TRAINING_DATA_ROWS,testingData,0,TESTING_DATA_ROWS);
 
-    }
-
-    public void printArray(double[][] arr) {
-        for (double[] doubles : arr) {
-            for (int j = 0; j < arr[0].length; j++) {
-                System.out.print(doubles[j] + " ");
-            }
-            System.out.println();
-        }
     }
 
     public static void shuffle2DArray(double[][] array) {
@@ -107,7 +99,7 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
             DoubleData input = (DoubleData) this.input;
 
             int hits = 0;
-            double expectedResult=0;
+            double expectedResult;
 
             for (double[] riceDatum : this.trainingData) {
 
@@ -142,7 +134,8 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
         DoubleData input = (DoubleData) this.input;
         int hits = 0;
-        double expectedResult=0;
+        int[] confusionMatrix=null;
+        double expectedResult = 0;
 
 
 
@@ -160,7 +153,8 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
             assert bestIndividual instanceof GPIndividual;
 
-            hits = getHits(state, (GPIndividual) bestIndividual, threadnum, input, hits, expectedResult);
+            hits =                       getHits(state, (GPIndividual) bestIndividual, threadnum, input, hits, expectedResult);
+            confusionMatrix = getConfusionMatrix(state, (GPIndividual) bestIndividual, threadnum, input,       expectedResult);
         }
 
         state.output.println("Best Individual's total correct hits: "+hits,log);
@@ -170,19 +164,52 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
         else
             state.output.println("Best individual is not optimal.",log);
 
+
+        //confusion matrix print
+        state.output.println("\nConfusion Matrix:",log);
+        assert confusionMatrix != null;
+        state.output.println("\t\tTRUE POSITIVE:\t"+confusionMatrix[0] +"\t\tFALSE POSITIVE:\t"+ confusionMatrix[1],log);
+        state.output.println("\t\tFALSE NEGATIVE:\t"+confusionMatrix[2] +"\t\tTRUE POSITIVE:\t"+ confusionMatrix[3],log);
+
     }
 
     private int getHits(EvolutionState state, GPIndividual bestIndividual, int threadnum, DoubleData input, int hits, double expectedResult) {
         bestIndividual.trees[0].child.eval(
                 state, threadnum, input, stack, bestIndividual, this);
 
-        if (input.x >= 0.0 && expectedResult > 0.0) {
+        if (input.x >= 0.0 && expectedResult == 1.0) {
             hits++;
         }
-        else if (input.x < 0.0 && expectedResult < 0.0) {
+        else if (input.x < 0.0 && expectedResult == -1.0) {
             hits++;
         }
         return hits;
+    }
+
+    private int[] getConfusionMatrix(EvolutionState state, GPIndividual bestIndividual, int threadnum, DoubleData input, double expectedResult) {
+
+
+
+        bestIndividual.trees[0].child.eval(
+                state, threadnum, input, stack, bestIndividual, this);
+
+        //true positive
+        if ((input.x >= 0.0 && expectedResult == 1.0) || (input.x < 0.0 && expectedResult == -1.0))
+            TP++;
+
+        //true negative
+        if ((input.x < 0.0 && expectedResult != 1.0) || (input.x >= 0.0 && expectedResult != -1.0))
+            TN++;
+
+        //false positive
+        if (input.x >= 0.0 && expectedResult != 1.0 || (input.x < 0.0 && expectedResult != -1.0))
+            FP++;
+
+        //false negative
+        if (input.x < 0 && expectedResult == 1.0 || (input.x >= 0.0 && expectedResult == -1.0))
+            FN++;
+
+        return new int[]{TN,FP,FN,TP};
     }
 
 }
