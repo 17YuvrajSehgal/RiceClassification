@@ -121,15 +121,7 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
                 expectedResult = riceDatum[7];
 
-                ((GPIndividual) individual).trees[0].child.eval(
-                        evolutionState, threadNum, input, stack, ((GPIndividual) individual), this);
-
-                if (input.x >= 0.0 && expectedResult > 0.0) {
-                    hits++;
-                }
-                else if (input.x < 0.0 && expectedResult < 0.0) {
-                    hits++;
-                }
+                hits = getHits(evolutionState, (GPIndividual) individual, threadNum, input, hits, expectedResult);
 
                 KozaFitness kozaFitness = ((KozaFitness) individual.fitness);
                 kozaFitness.setStandardizedFitness(evolutionState, this.trainingData.length-hits);
@@ -166,15 +158,9 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
             expectedResult = riceDatum[7];
 
-            ((GPIndividual) bestIndividual).trees[0].child.eval(
-                    state, threadnum, input, stack, ((GPIndividual) bestIndividual), this);
+            assert bestIndividual instanceof GPIndividual;
 
-            if (input.x >= 0.0 && expectedResult > 0.0) {
-                hits++;
-            }
-            else if (input.x < 0.0 && expectedResult < 0.0) {
-                hits++;
-            }
+            hits = getHits(state, (GPIndividual) bestIndividual, threadnum, input, hits, expectedResult);
         }
 
         state.output.println("Best Individual's total correct hits: "+hits,log);
@@ -182,8 +168,21 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
         if(hits == this.testingData.length)
             state.output.println("Best individual is OPTIMAL", log);
         else
-            state.output.println("Best indivual is not optimal.",log);
+            state.output.println("Best individual is not optimal.",log);
 
+    }
+
+    private int getHits(EvolutionState state, GPIndividual bestIndividual, int threadnum, DoubleData input, int hits, double expectedResult) {
+        bestIndividual.trees[0].child.eval(
+                state, threadnum, input, stack, bestIndividual, this);
+
+        if (input.x >= 0.0 && expectedResult > 0.0) {
+            hits++;
+        }
+        else if (input.x < 0.0 && expectedResult < 0.0) {
+            hits++;
+        }
+        return hits;
     }
 
 }
