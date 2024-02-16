@@ -1,0 +1,959 @@
+
+Generation: 0
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=947.0 Adjusted=0.0010548523206751054 Hits=1339
+Tree 0:
+ (+ (+ (/ (max (min perimeter perimeter) (+
+     perimeter extent)) (min (- area convex_area)
+     (cos extent))) (max (cos (max 0.17287365168195834
+     convex_area)) (sin (min extent extent))))
+     (sin (min (/ (- major_axis area) (cos major_axis))
+         (sin (cos convex_area)))))
+
+Generation: 1
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=873.0 Adjusted=0.0011441647597254005 Hits=1413
+Tree 0:
+ (- (- (min eccentricity area) (min eccentricity
+     (sin 0.17287365168195834))) (cos (cos extent)))
+
+Generation: 2
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (+ 0.17287365168195834
+     convex_area) (/ (min major_axis (/ (cos major_axis)
+     minor_axis)) extent)) (max (+ convex_area
+     eccentricity) (+ 0.17287365168195834 extent))))
+
+Generation: 3
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (+ 0.17287365168195834
+     convex_area) (/ (min major_axis (/ (cos major_axis)
+     minor_axis)) extent)) (max (sin (+ convex_area
+     major_axis)) (+ 0.17287365168195834 extent))))
+
+Generation: 4
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (+ 0.17287365168195834
+     convex_area) (/ (min major_axis (/ (cos major_axis)
+     minor_axis)) (cos area))) (max (sin (+ convex_area
+     major_axis)) (+ 0.17287365168195834 extent))))
+
+Generation: 5
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (max 0.17287365168195834
+     (+ perimeter (+ minor_axis convex_area)))
+     (/ (min major_axis (min area (/ eccentricity
+         major_axis))) extent)) (max (sin (+ convex_area
+     major_axis)) (+ 0.17287365168195834 extent))))
+
+Generation: 6
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (max 0.17287365168195834
+     (+ perimeter (+ minor_axis convex_area)))
+     (/ (min major_axis (min (min (max (max (/
+         area major_axis) (+ extent major_axis)) (min
+         (- area eccentricity) (- (- extent extent)
+         (+ minor_axis convex_area)))) (sin (sin extent)))
+         (/ eccentricity major_axis))) extent)) (max
+     (sin (+ convex_area major_axis)) (+ 0.17287365168195834
+     extent))))
+
+Generation: 7
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (+ 0.17287365168195834
+     convex_area) (/ (min major_axis (- (+ convex_area
+     0.17287365168195834) minor_axis)) extent))
+     (max (- (- 0.17287365168195834 extent) (max
+         minor_axis area)) (sin extent))))
+
+Generation: 8
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- eccentricity minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (cos 0.17287365168195834)
+     extent))
+
+Generation: 9
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (/ (max eccentricity
+     perimeter) (min perimeter minor_axis)) (/
+     (min major_axis (min (min (max (max (/ area
+         major_axis) (+ extent major_axis)) perimeter)
+         (sin (sin extent))) (/ eccentricity major_axis)))
+     extent)) (- major_axis minor_axis)))
+
+Generation: 10
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=508.0 Adjusted=0.0019646365422396855 Hits=1778
+Tree 0:
+ (/ (sin (/ (max (- major_axis minor_axis)
+     (+ minor_axis perimeter)) (min perimeter
+     minor_axis))) (max (+ (+ 0.17287365168195834
+     convex_area) (/ (min major_axis (/ (- (-
+     major_axis area) (- eccentricity minor_axis))
+     minor_axis)) extent)) (- (sin (/ perimeter
+     major_axis)) (max perimeter (cos major_axis)))))
+
+Generation: 11
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (cos extent)
+         (/ perimeter eccentricity))) (- (+ convex_area
+         major_axis) (max (min extent extent) (min
+         perimeter minor_axis)))))
+
+Generation: 12
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (cos extent)
+         (/ perimeter eccentricity))) (- (+ convex_area
+         major_axis) (max (min extent extent) (min
+         perimeter minor_axis)))))
+
+Generation: 13
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (cos extent)
+         (/ perimeter eccentricity))) (- (+ convex_area
+         major_axis) (max (min extent extent) (min
+         perimeter (sin (/ (max (- major_axis minor_axis)
+         (+ minor_axis perimeter)) (min perimeter
+         minor_axis))))))))
+
+Generation: 14
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (cos extent)
+         (/ (- 0.17287365168195834 minor_axis) eccentricity)))
+         (- (+ convex_area major_axis) 0.17287365168195834)))
+
+Generation: 15
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (cos extent)
+         (/ perimeter eccentricity))) (- (+ convex_area
+         major_axis) (max (min (max (- major_axis
+         minor_axis) (+ minor_axis perimeter)) extent)
+         (min perimeter (sin (/ (max (- major_axis
+             minor_axis) (+ minor_axis perimeter)) (min
+             perimeter minor_axis))))))))
+
+Generation: 16
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min eccentricity (- (/ (max (sin (/ (max
+         eccentricity perimeter) (- eccentricity minor_axis)))
+         (+ minor_axis perimeter)) (min perimeter
+         minor_axis)) 0.17287365168195834)))
+
+Generation: 17
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (max eccentricity perimeter) (- (+ convex_area
+         major_axis) 0.17287365168195834)))
+
+Generation: 18
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (sin
+     (/ (max (max (sin (+ convex_area major_axis))
+         (+ 0.17287365168195834 extent)) (+ minor_axis
+         perimeter)) (min perimeter minor_axis)))
+     (/ area 0.17287365168195834))) (min eccentricity
+     (- (+ (max 0.17287365168195834 (min perimeter
+         convex_area)) major_axis) 0.17287365168195834)))
+
+Generation: 19
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (max (+ (-
+         (/ 0.17287365168195834 area) area) (/ (min
+         perimeter extent) extent)) (- (sin (/ perimeter
+         major_axis)) (max (+ (/ (max minor_axis extent)
+         minor_axis) 0.17287365168195834) major_axis)))
+         (/ perimeter eccentricity))) (- (+ convex_area
+         major_axis) (max (min extent extent) (min
+         perimeter minor_axis)))))
+
+Generation: 20
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area 0.17287365168195834))) (+ (-
+     minor_axis (/ (min (sin (/ (max (/ (- major_axis
+     minor_axis) minor_axis) (+ minor_axis perimeter))
+     (min perimeter minor_axis))) minor_axis)
+     (cos area))) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (cos extent)
+         (/ perimeter eccentricity))) (- (/ (cos (-
+         eccentricity minor_axis)) eccentricity) 0.17287365168195834)))
+
+Generation: 21
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=393.0 Adjusted=0.0025380710659898475 Hits=1893
+Tree 0:
+ (+ (+ (/ (+ (+ (/ (- minor_axis convex_area)
+     (/ (/ (+ 0.17287365168195834 extent) extent)
+         (+ convex_area 0.17287365168195834))) (+
+     (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (+ eccentricity perimeter) (/
+         eccentricity convex_area)) (- (max (min major_axis
+         (/ (+ (+ convex_area extent) (max (min perimeter
+             perimeter) (- (- (min eccentricity area)
+             (- convex_area extent)) eccentricity))) minor_axis))
+         (- (sin (/ perimeter major_axis)) (max (-
+             major_axis minor_axis) (+ minor_axis perimeter))))
+         (/ perimeter eccentricity))) (- (+ convex_area
+         major_axis) (max (min extent extent) (min
+         perimeter minor_axis))))) (/ (/ (+ 0.17287365168195834
+     extent) extent) (+ eccentricity perimeter)))
+     (+ (- minor_axis perimeter) (+ minor_axis
+         perimeter))) (min (min (+ (+ eccentricity
+     perimeter) (/ eccentricity convex_area))
+     (- (min convex_area major_axis) major_axis))
+     (- (+ convex_area major_axis) 0.17287365168195834)))
+
+Generation: 22
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=337.0 Adjusted=0.0029585798816568047 Hits=1949
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (-
+     (max (+ (+ 0.17287365168195834 convex_area)
+         (/ (min major_axis (+ (sin (sin minor_axis))
+             (- (/ 0.17287365168195834 area) area))) extent))
+         (max (+ convex_area eccentricity) (max (+
+             (/ (+ eccentricity area) minor_axis) (+ eccentricity
+             convex_area)) (min (min extent extent) (/
+             convex_area perimeter))))) perimeter))) (+
+     (/ (/ (+ 0.17287365168195834 extent) extent)
+         extent) (/ area 0.17287365168195834))) (+
+     (+ 0.17287365168195834 convex_area) (sin
+     (max (- major_axis minor_axis) (+ minor_axis
+         perimeter)))))
+
+Generation: 23
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=321.0 Adjusted=0.003105590062111801 Hits=1965
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- minor_axis perimeter) (/
+     perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) (/ area 0.17287365168195834)))
+     (min (min (+ (/ (+ (+ (cos (sin (max (/ area
+         extent) (min convex_area convex_area))))
+         (/ (+ 0.17287365168195834 extent) extent))
+         (/ (min major_axis (sin (/ (+ (/ (- minor_axis
+             convex_area) (/ (/ (+ 0.17287365168195834
+             extent) extent) (+ convex_area 0.17287365168195834)))
+             (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+             (min perimeter minor_axis)))) (+ extent perimeter)))
+         (max (min perimeter minor_axis) (max convex_area
+             (+ minor_axis perimeter)))) (max (min perimeter
+         minor_axis) (- 0.17287365168195834 minor_axis)))
+         (- (cos extent) (/ perimeter eccentricity)))
+         (- (+ convex_area major_axis) 0.17287365168195834)))
+
+Generation: 24
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=319.0 Adjusted=0.003125 Hits=1967
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (-
+     (max (+ (+ 0.17287365168195834 convex_area)
+         (/ (min major_axis (+ (sin (sin minor_axis))
+             (- (/ 0.17287365168195834 area) area))) extent))
+         (max (+ convex_area eccentricity) (max (+
+             (/ eccentricity convex_area) (+ eccentricity
+             convex_area)) (min (min extent extent) (/
+             convex_area perimeter))))) perimeter))) (+
+     (/ (/ (+ 0.17287365168195834 extent) extent)
+         extent) (/ area 0.17287365168195834))) (+
+     (+ 0.17287365168195834 convex_area) (sin
+     (max (- major_axis minor_axis) (+ minor_axis
+         perimeter)))))
+
+Generation: 25
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=319.0 Adjusted=0.003125 Hits=1967
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (-
+     (max (+ (+ 0.17287365168195834 convex_area)
+         (/ (min major_axis (cos (sin (/ (max convex_area
+             (+ minor_axis perimeter)) (min perimeter
+             minor_axis))))) extent)) (/ (/ (+ 0.17287365168195834
+         extent) extent) (+ convex_area 0.17287365168195834)))
+     perimeter))) (+ (/ (/ (+ 0.17287365168195834
+     extent) extent) extent) (/ area 0.17287365168195834)))
+     (+ (+ 0.17287365168195834 convex_area) (sin
+         (max (- major_axis minor_axis) (+ minor_axis
+             perimeter)))))
+
+Generation: 26
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=319.0 Adjusted=0.003125 Hits=1967
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (-
+     (max (+ (+ 0.17287365168195834 convex_area)
+         (/ (min major_axis (+ (/ (- minor_axis convex_area)
+             (/ (/ (+ 0.17287365168195834 extent) extent)
+                 (/ area extent))) (- (/ 0.17287365168195834
+             area) area))) extent)) (max (+ convex_area
+         eccentricity) (max (+ (+ (sin perimeter)
+         eccentricity) (+ eccentricity convex_area))
+         (min (min extent extent) (/ convex_area perimeter)))))
+     perimeter))) (+ (/ (+ 0.17287365168195834
+     convex_area) extent) (/ area 0.17287365168195834)))
+     (+ (+ 0.17287365168195834 convex_area) (sin
+         (max (- major_axis minor_axis) (+ minor_axis
+             perimeter)))))
+
+Generation: 27
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=319.0 Adjusted=0.003125 Hits=1967
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (-
+     (max (+ (+ 0.17287365168195834 convex_area)
+         (/ (min major_axis (+ (/ (+ (- minor_axis
+             perimeter) (/ area 0.17287365168195834))
+             (/ (/ (+ 0.17287365168195834 extent) extent)
+                 (/ area extent))) (- (/ 0.17287365168195834
+             area) area))) extent)) (max (+ convex_area
+         eccentricity) (+ eccentricity perimeter)))
+     perimeter))) (+ (/ (+ 0.17287365168195834
+     convex_area) extent) (/ area 0.17287365168195834)))
+     (+ (+ 0.17287365168195834 convex_area) (sin
+         (max (- major_axis minor_axis) (+ minor_axis
+             perimeter)))))
+
+Generation: 28
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=319.0 Adjusted=0.003125 Hits=1967
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (-
+     (max (+ (+ 0.17287365168195834 convex_area)
+         (/ (min major_axis (cos (sin (/ (max convex_area
+             (+ minor_axis perimeter)) (min perimeter
+             minor_axis))))) extent)) (/ (/ (+ 0.17287365168195834
+         extent) extent) (+ convex_area 0.17287365168195834)))
+     perimeter))) (+ (/ (/ (+ 0.17287365168195834
+     extent) extent) extent) (/ (max (+ (+ 0.17287365168195834
+     convex_area) (/ (min major_axis (+ (sin (sin
+     minor_axis)) (- (/ 0.17287365168195834 area)
+     area))) extent)) (max (+ convex_area eccentricity)
+     (max (+ (/ (+ eccentricity area) minor_axis)
+         (+ eccentricity convex_area)) (min (cos (sin
+         (/ (/ (+ 0.17287365168195834 extent) extent)
+             (min perimeter minor_axis)))) (/ convex_area
+         perimeter))))) 0.17287365168195834))) (+
+     (+ 0.17287365168195834 convex_area) (sin
+     (max (- major_axis minor_axis) (+ minor_axis
+         perimeter)))))
+
+Generation: 29
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=307.0 Adjusted=0.003246753246753247 Hits=1979
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ eccentricity
+     convex_area)) (min perimeter perimeter))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (min (/ area 0.17287365168195834)
+         extent) (- perimeter convex_area))) (- (cos
+         extent) (/ perimeter eccentricity))) (- (+
+         0.17287365168195834 convex_area) 0.17287365168195834)))
+
+Generation: 30
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=307.0 Adjusted=0.003246753246753247 Hits=1979
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (/ eccentricity
+     convex_area) minor_axis)) (min perimeter
+     perimeter)) minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (min (/ area 0.17287365168195834)
+         extent) (- perimeter convex_area))) (- (cos
+         extent) (/ perimeter eccentricity))) (- (+
+         0.17287365168195834 convex_area) 0.17287365168195834)))
+
+Generation: 31
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=307.0 Adjusted=0.003246753246753247 Hits=1979
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (/ eccentricity
+     convex_area) minor_axis)) (min perimeter
+     perimeter)) minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (+ minor_axis perimeter) (- (+ 0.17287365168195834
+         convex_area) 0.17287365168195834)))
+
+Generation: 32
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=307.0 Adjusted=0.003246753246753247 Hits=1979
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (min (/ perimeter major_axis)
+     (/ perimeter minor_axis)) (/ perimeter eccentricity)))))
+     (+ (/ (- minor_axis convex_area) (/ (/ (+
+         0.17287365168195834 extent) extent) (+ convex_area
+         (- (- (min (+ (/ (max (min perimeter perimeter)
+             (+ perimeter extent)) (min perimeter (+ minor_axis
+             perimeter))) (/ eccentricity convex_area))
+             (min perimeter perimeter)) minor_axis) (/
+             perimeter eccentricity))))) (+ (- minor_axis
+         perimeter) (/ area 0.17287365168195834))))
+     (min (min (+ (/ (+ (+ (cos (sin (max (/ area
+         extent) (min convex_area convex_area))))
+         (+ 0.17287365168195834 extent)) (/ (min major_axis
+         (sin (/ (+ (/ (- minor_axis convex_area)
+             (+ minor_axis perimeter)) (+ (- minor_axis
+             perimeter) (/ area 0.17287365168195834)))
+             (min perimeter minor_axis)))) (+ extent perimeter)))
+         (max (min perimeter minor_axis) (max convex_area
+             (+ minor_axis perimeter)))) (max (min perimeter
+         minor_axis) (- 0.17287365168195834 minor_axis)))
+         (- (cos extent) (/ perimeter eccentricity)))
+         (- perimeter 0.17287365168195834)))
+
+Generation: 33
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=306.0 Adjusted=0.003257328990228013 Hits=1980
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+     extent) extent)) (min perimeter (/ area 0.17287365168195834)))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (/ convex_area perimeter)
+         (- perimeter convex_area))) (- (cos extent)
+         (/ perimeter eccentricity))) (- (+ 0.17287365168195834
+         convex_area) 0.17287365168195834)))
+
+Generation: 34
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=306.0 Adjusted=0.003257328990228013 Hits=1980
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+     extent) extent)) (min perimeter (/ area 0.17287365168195834)))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (+ 0.17287365168195834 extent) (- (+
+         0.17287365168195834 convex_area) 0.17287365168195834)))
+
+Generation: 35
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=306.0 Adjusted=0.003257328990228013 Hits=1980
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+     extent) extent)) (min perimeter (/ area 0.17287365168195834)))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (/ convex_area perimeter)
+         (- perimeter convex_area))) (- (+ (sin (sin
+         minor_axis)) (- (/ 0.17287365168195834 area)
+         area)) (/ perimeter eccentricity))) (- (+
+         0.17287365168195834 convex_area) 0.17287365168195834)))
+
+Generation: 36
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=305.0 Adjusted=0.0032679738562091504 Hits=1981
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+     extent) (/ 0.17287365168195834 area))) (min
+     perimeter (/ area 0.17287365168195834)))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (/ convex_area perimeter)
+         (- perimeter convex_area))) (+ (- minor_axis
+         perimeter) (/ area 0.17287365168195834)))
+         (/ (+ (cos extent) (+ eccentricity convex_area))
+             (+ convex_area 0.17287365168195834))))
+
+Generation: 37
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=305.0 Adjusted=0.0032679738562091504 Hits=1981
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+     extent) extent)) (+ (+ (cos (sin (+ 0.17287365168195834
+     extent))) (/ (+ 0.17287365168195834 extent)
+     extent)) (/ (min major_axis (sin (/ (+ (/
+     (- minor_axis convex_area) (+ minor_axis
+     perimeter)) (+ (- minor_axis perimeter) (/
+     area 0.17287365168195834))) (min perimeter
+     minor_axis)))) (min major_axis (+ (+ 0.17287365168195834
+     extent) (- (max (min perimeter minor_axis)
+     (/ (max minor_axis extent) minor_axis)) area))))))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min major_axis (+ (sin (sin minor_axis))
+         (+ (+ 0.17287365168195834 convex_area) (+
+             convex_area (- (- (min (+ (/ (max (min perimeter
+             perimeter) (+ perimeter extent)) (min perimeter
+             (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+             extent) extent)) (+ (+ (cos (sin (+ 0.17287365168195834
+             extent))) (/ (+ 0.17287365168195834 extent)
+             extent)) (/ (min major_axis (sin (/ (+ (/
+             (- minor_axis convex_area) (+ minor_axis
+             perimeter)) (+ (- minor_axis perimeter) (/
+             area 0.17287365168195834))) (min perimeter
+             minor_axis)))) (min major_axis (+ (+ 0.17287365168195834
+             extent) (- (max (min perimeter minor_axis)
+             (/ (max minor_axis extent) minor_axis)) area))))))
+             minor_axis) (/ perimeter eccentricity)))))))
+
+Generation: 38
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=305.0 Adjusted=0.0032679738562091504 Hits=1981
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) (/ (+ 0.17287365168195834
+     extent) (/ 0.17287365168195834 area))) (min
+     perimeter (/ area 0.17287365168195834)))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (/ convex_area perimeter)
+         (- perimeter convex_area))) (+ (- minor_axis
+         perimeter) (/ area 0.17287365168195834)))
+         (/ (+ (cos extent) (+ eccentricity convex_area))
+             (+ convex_area 0.17287365168195834))))
+
+Generation: 39
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=305.0 Adjusted=0.0032679738562091504 Hits=1981
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ extent (/ (+ 0.17287365168195834
+     extent) extent)) (min perimeter (/ area 0.17287365168195834)))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834)))
+     (min (min (sin (- (/ convex_area perimeter)
+         (- perimeter convex_area))) (+ (/ perimeter
+         (min perimeter minor_axis)) (/ area 0.17287365168195834)))
+         (- (+ 0.17287365168195834 convex_area) 0.17287365168195834)))
+
+Generation: 40
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834))
+     (+ (+ 0.17287365168195834 convex_area) (max
+         convex_area extent)))))
+
+Generation: 41
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834))
+     (+ (+ 0.17287365168195834 convex_area) (max
+         convex_area extent)))))
+
+Generation: 42
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834))
+     (+ (+ 0.17287365168195834 convex_area) (max
+         convex_area extent)))))
+
+Generation: 43
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (/ (+ 0.17287365168195834 extent) extent)
+     (+ (+ 0.17287365168195834 convex_area) (max
+         convex_area extent)))))
+
+Generation: 44
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- (- (min (+ (/ (max (min perimeter perimeter)
+         (+ perimeter extent)) (min perimeter (+ minor_axis
+         perimeter))) (/ (+ 0.17287365168195834 extent)
+         extent)) (+ (+ (cos (- minor_axis convex_area))
+         (/ (+ 0.17287365168195834 extent) extent))
+         (/ eccentricity (min (min (sin (- (/ convex_area
+             perimeter) (- perimeter convex_area))) (-
+             (cos extent) (- major_axis minor_axis)))
+             (- (+ 0.17287365168195834 convex_area) 0.17287365168195834)))))
+         minor_axis) (/ perimeter eccentricity)) (/
+         area 0.17287365168195834)) (+ (+ 0.17287365168195834
+     convex_area) (max convex_area extent)))))
+
+Generation: 45
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- perimeter 0.17287365168195834) (/ area
+         0.17287365168195834)) (+ (+ convex_area (-
+     (- (min (+ (/ (max (min perimeter perimeter)
+         (+ perimeter extent)) (min perimeter (+ minor_axis
+         perimeter))) (/ (+ 0.17287365168195834 extent)
+         (/ 0.17287365168195834 area))) (min perimeter
+         minor_axis)) minor_axis) (/ perimeter eccentricity)))
+     (max convex_area extent)))))
+
+Generation: 46
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (/ perimeter eccentricity)) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834))
+     (+ (+ 0.17287365168195834 convex_area) perimeter))))
+
+Generation: 47
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (+ 0.17287365168195834
+     extent) (/ (+ 0.17287365168195834 extent)
+     extent)) (min (+ 0.17287365168195834 convex_area)
+     (/ area 0.17287365168195834))) minor_axis)
+     (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (min perimeter
+         perimeter)) (+ (+ (/ (max (min perimeter
+     perimeter) (+ perimeter extent)) (min perimeter
+     (+ minor_axis perimeter))) convex_area) (max
+     convex_area extent)))))
+
+Generation: 48
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=301.0 Adjusted=0.0033112582781456954 Hits=1985
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ 0.17287365168195834 extent) extent) (+
+     convex_area (- (- (min (+ (cos (sin (+ 0.17287365168195834
+     extent))) (/ (+ 0.17287365168195834 extent)
+     extent)) (+ convex_area (/ (- minor_axis
+     convex_area) (+ minor_axis perimeter))))
+     minor_axis) (/ perimeter eccentricity)))))
+     (+ (- minor_axis perimeter) major_axis))
+     (min major_axis (+ (+ (- minor_axis perimeter)
+         (/ area 0.17287365168195834)) (+ (+ minor_axis
+         perimeter) (max convex_area extent)))))
+
+Generation: 49
+Best Individual:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=275.0 Adjusted=0.0036231884057971015 Hits=2011
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ (min (+ (/ (max minor_axis (- minor_axis
+         convex_area)) (min perimeter (+ minor_axis
+         perimeter))) (/ eccentricity convex_area))
+         (min perimeter perimeter)) extent) extent)
+     (+ convex_area (- (- (min (+ (+ 0.17287365168195834
+         extent) (/ (+ (max (min perimeter perimeter)
+         (+ perimeter extent)) extent) extent)) (min
+         extent (/ area 0.17287365168195834))) minor_axis)
+         (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834))
+     (+ (+ 0.17287365168195834 (+ 0.17287365168195834
+         convex_area)) (max convex_area extent)))))
+
+Best Individual of Run:
+Subpopulation 0:
+Evaluated: true
+Fitness: Standardized=275.0 Adjusted=0.0036231884057971015 Hits=2011
+Tree 0:
+ (+ (+ (/ (- minor_axis convex_area) (/ (/
+     (+ (min (+ (/ (max minor_axis (- minor_axis
+         convex_area)) (min perimeter (+ minor_axis
+         perimeter))) (/ eccentricity convex_area))
+         (min perimeter perimeter)) extent) extent)
+     (+ convex_area (- (- (min (+ (+ 0.17287365168195834
+         extent) (/ (+ (max (min perimeter perimeter)
+         (+ perimeter extent)) extent) extent)) (min
+         extent (/ area 0.17287365168195834))) minor_axis)
+         (/ perimeter eccentricity))))) (+ (- minor_axis
+     perimeter) major_axis)) (min major_axis (+
+     (+ (- minor_axis perimeter) (/ area 0.17287365168195834))
+     (+ (+ 0.17287365168195834 (+ 0.17287365168195834
+         convex_area)) (max convex_area extent)))))
+Best Individual's total correct hits: 1354
+Best Individual's testing correctness: 88.84514435695539
+Best individual is not optimal.
+
+Confusion Matrix:
+		TRUE POSITIVE:	1354		FALSE POSITIVE:	170
+		FALSE NEGATIVE:	170		TRUE POSITIVE:	1354

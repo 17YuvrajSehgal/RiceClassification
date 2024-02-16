@@ -50,7 +50,7 @@ pop.subpop.0.size = 100
 generations = 50
 
 
-eval.problem = main.Classifier
+eval.problem = main.RiceClassifier
 eval.problem.data = main.DoubleData
 
 # output statistics to the file "out.stat" in the directory
@@ -58,7 +58,7 @@ eval.problem.data = main.DoubleData
 stat.file				$out.stat
 
 ##change
-breed.elite.0 = 			2
+breed.elite.0 = 			3
 
 # Reproduction will use Tournament Selection
 breed.reproduce.source.0 = ec.select.TournamentSelection

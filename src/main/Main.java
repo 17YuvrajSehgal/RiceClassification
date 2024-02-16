@@ -6,7 +6,7 @@ import ec.Evolve;
 public class Main {
     public static void main(String[] args) {
         String pathToFiles = "src/results/";
-        int numberOfJobs = 1;
+        int numberOfJobs = 3;
         String statisticType = "ec.gp.koza.KozaShortStatistics";
         String[] runConfig = new String[] {
                 Evolve.A_FILE, "src/parameterFiles/rice.params",

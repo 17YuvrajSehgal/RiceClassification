@@ -6,7 +6,7 @@ import ec.gp.ADFStack;
 import ec.gp.GPData;
 import ec.gp.GPIndividual;
 import ec.gp.GPNode;
-import main.Classifier;
+import main.RiceClassifier;
 import main.DoubleData;
 
 public class ConvexArea extends GPNode {
@@ -26,6 +26,6 @@ public class ConvexArea extends GPNode {
                      final GPIndividual individual,
                      final Problem problem) {
         DoubleData rd = ((DoubleData) (input));
-        rd.x = ((Classifier) problem).convexArea;
+        rd.x = ((RiceClassifier) problem).convexArea;
     }
 }

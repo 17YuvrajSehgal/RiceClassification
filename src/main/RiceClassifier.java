@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 
-public class Classifier extends GPProblem implements SimpleProblemForm {
+public class RiceClassifier extends GPProblem implements SimpleProblemForm {
 
     int TN=0,FP=0,FN=0,TP=0;
     public static final String P_DATA = "data";
@@ -23,7 +23,6 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
     double[][] trainingData, testingData;
 
     public double area, perimeter, majorAxisLength, minorAxisLength, eccentricity, convexArea, extent;
-
     public void fileReader() {
 
         Scanner scanner;
@@ -116,12 +115,25 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
                 hits = getHits(evolutionState, (GPIndividual) individual, threadNum, input, hits, expectedResult);
 
                 KozaFitness kozaFitness = ((KozaFitness) individual.fitness);
-                kozaFitness.setStandardizedFitness(evolutionState, this.trainingData.length-hits);
+                kozaFitness.setStandardizedFitness(evolutionState, (double) (this.trainingData.length - hits) /this.trainingData.length);
                 kozaFitness.hits = hits;
                 individual.evaluated = true;
             }
 
         }
+    }
+
+    private int getHits(EvolutionState state, GPIndividual bestIndividual, int threadnum, DoubleData input, int hits, double expectedResult) {
+        bestIndividual.trees[0].child.eval(
+                state, threadnum, input, stack, bestIndividual, this);
+
+        if (input.x >= 0.0 && expectedResult == 1.0) {
+            hits++;
+        }
+        else if (input.x < 0.0 && expectedResult == -1.0) {
+            hits++;
+        }
+        return hits;
     }
 
     @Override
@@ -135,7 +147,7 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
         DoubleData input = (DoubleData) this.input;
         int hits = 0;
         int[] confusionMatrix=null;
-        double expectedResult = 0;
+        double expectedResult;
 
 
 
@@ -153,11 +165,12 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
 
             assert bestIndividual instanceof GPIndividual;
 
-            hits =                       getHits(state, (GPIndividual) bestIndividual, threadnum, input, hits, expectedResult);
-            confusionMatrix = getConfusionMatrix(state, (GPIndividual) bestIndividual, threadnum, input,       expectedResult);
+            hits = getHits(state, (GPIndividual) bestIndividual, threadnum, input, hits, expectedResult);
+            confusionMatrix = getConfusionMatrix(state, (GPIndividual) bestIndividual, threadnum, input, expectedResult);
         }
 
-        state.output.println("Best Individual's total correct hits: "+hits,log);
+        state.output.println("Best Individual's total correct hits: "+hits+" out of "+this.testingData.length,log);
+        state.output.println("Best Individual's testing correctness: "+((double)hits / (double)this.testingData.length)*100+"%",log);
 
         if(hits == this.testingData.length)
             state.output.println("Best individual is OPTIMAL", log);
@@ -168,22 +181,9 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
         //confusion matrix print
         state.output.println("\nConfusion Matrix:",log);
         assert confusionMatrix != null;
-        state.output.println("\t\tTRUE POSITIVE:\t"+confusionMatrix[0] +"\t\tFALSE POSITIVE:\t"+ confusionMatrix[1],log);
+        state.output.println("\t\tTRUE NEGATIVE:\t"+confusionMatrix[0] +"\t\tFALSE POSITIVE:\t"+ confusionMatrix[1],log);
         state.output.println("\t\tFALSE NEGATIVE:\t"+confusionMatrix[2] +"\t\tTRUE POSITIVE:\t"+ confusionMatrix[3],log);
 
-    }
-
-    private int getHits(EvolutionState state, GPIndividual bestIndividual, int threadnum, DoubleData input, int hits, double expectedResult) {
-        bestIndividual.trees[0].child.eval(
-                state, threadnum, input, stack, bestIndividual, this);
-
-        if (input.x >= 0.0 && expectedResult == 1.0) {
-            hits++;
-        }
-        else if (input.x < 0.0 && expectedResult == -1.0) {
-            hits++;
-        }
-        return hits;
     }
 
     private int[] getConfusionMatrix(EvolutionState state, GPIndividual bestIndividual, int threadnum, DoubleData input, double expectedResult) {
@@ -194,19 +194,19 @@ public class Classifier extends GPProblem implements SimpleProblemForm {
                 state, threadnum, input, stack, bestIndividual, this);
 
         //true positive
-        if ((input.x >= 0.0 && expectedResult == 1.0) || (input.x < 0.0 && expectedResult == -1.0))
+        if ((input.x >= 0.0 && expectedResult > 0) || (input.x < 0.0 && expectedResult < 0))
             TP++;
 
         //true negative
-        if ((input.x < 0.0 && expectedResult != 1.0) || (input.x >= 0.0 && expectedResult != -1.0))
+        else if ((input.x < 0.0 && expectedResult < 0) || (input.x >= 0.0 && expectedResult > 0))
             TN++;
 
         //false positive
-        if (input.x >= 0.0 && expectedResult != 1.0 || (input.x < 0.0 && expectedResult != -1.0))
+        else if (input.x >= 0 && expectedResult < 0 || (input.x < 0 && expectedResult >= 0))
             FP++;
 
         //false negative
-        if (input.x < 0 && expectedResult == 1.0 || (input.x >= 0.0 && expectedResult == -1.0))
+        else //if (input.x < 0 && expectedResult >= 0 || (input.x >= 0 && expectedResult < 0))
             FN++;
 
         return new int[]{TN,FP,FN,TP};
